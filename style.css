@@ -1,0 +1,94 @@
+body,
+pre,
+code,
+kbd,
+samp {
+  font-family: "Press Start 2P", sans-serif;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Styling for the Swiper container */
+.swiper-container {
+  width: 100%;
+  height: 300px; /* Set a fixed height for the container */
+  overflow: hidden; /* Hide anything that exceeds the container */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Ensure consistent padding around each slide */
+  height: 100%; /* Make sure the slide takes up the full height */
+  box-sizing: border-box; /* Ensure padding doesn't affect layout */
+}
+
+.swiper-slide img {
+  width: 100%; /* Ensure image takes full width of the slide */
+  max-height: 100%; /* Ensure the image doesn't exceed the container's height */
+  object-fit: cover; /* Ensures the image covers the slide area */
+  border-radius: 8px; /* Add some rounding to image corners for better appearance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow to the images */
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 900px) {
+  .swiper-container {
+    height: 250px; /* Adjust the container height for smaller screens */
+  }
+  .swiper-slide img {
+    width: 100%; /* Images will take up the full width on smaller screens */
+    height: auto;
+  }
+}
+/* Button responsiveness */
+.nes-btn {
+  width: 100%; /* Make buttons take full width of the parent */
+  max-width: 300px; /* Limit max width on larger screens */
+  height: auto; /* Adjust height based on content */
+  font-size: 1.5vw; /* Scale font size */
+}
+
+/* Iframe responsiveness */
+dialog iframe {
+  width: 100vw; /* Full width of the viewport */
+  height: 90vh; /* Cover 90% of the viewport height */
+  max-width: 100%; /* Ensure iframe doesn't overflow */
+  border: none; /* Remove iframe border */
+  overflow: hidden;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Button responsiveness on mobile */
+  .nes-btn {
+    font-size: 4vw; /* Larger button text on mobile */
+    padding: 10px 20px;
+  }
+
+  dialog iframe {
+    width: 100vw; /* Full width of the viewport */
+    height: calc(
+      100vh - 50px
+    ); /* Cover entire viewport minus 50px for the close button */
+  }
+
+  /* Style for close button area */
+  .dialog-menu {
+    text-align: center; /* Center the button */
+    padding-top: 10px;
+    height: 50px; /* Reserve space at the bottom for the close button */
+  }
+}
+.nav-item {
+  margin: 7px;
+}
